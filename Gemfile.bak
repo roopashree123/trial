@@ -40,14 +40,17 @@ gem 'tzinfo-data', platforms: [:mingw, :mswin]
 
 
 group :development, :test do
-gem 'sqlite3-ruby'
+gem 'sqlite3-ruby', :require => "sqlite3"
 end
 
 group :production do
 gem 'pg'
 end
 
-gem 'thin'
-gem 'therubyracer'
-gem 'libv8', '~>3.16.14.3' 
+
+
+group :production do
+ gem 'libv8', '~> 3.11.8.3'
+ gem 'therubyracer', :platform => :ruby
+end
 
