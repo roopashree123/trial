@@ -47,5 +47,10 @@ group :production do
 gem 'pg'
 end
 
-gem 'thin'
-gem 'therubyracer'
+
+
+group :production do
+ gem 'libv8', '~> 3.11.8.3'
+ gem 'therubyracer', :platform => :ruby
+end
+
